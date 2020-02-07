@@ -9,7 +9,7 @@ RUN mkdir -p $GOPATH/src/github.com/zsfree/golang-web
 
 #RUN go get -u github.com/gin-gonic/gin
 
-RUN go build .
+RUN go build $GOPATH/src/github.com/zsfree/golang-web
 
 EXPOSE 8080
 
