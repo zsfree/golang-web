@@ -5,7 +5,7 @@ WORKDIR $GOPATH/src/github.com/zsfree/golang-web
 
 ADD . $GOPATH/src/github.com/zsfree/golang-web
 
-RUN go get -u github.com/gin-gonic/gin
+#RUN go get -u github.com/gin-gonic/gin
 
 RUN go build .
 
