@@ -1,16 +1,18 @@
 FROM golang:1.9
 MAINTAINER zsfree  "963916753@qq.com"
+
 # 该指令用于配置工作目录，其参数应该使用绝对目录。
 WORKDIR $GOPATH/src/github.com/zsfree/golang-web
 
-COPY . $GOPATH/src/github.com/zsfree/golang-web
+add . $GOPATH/src/github.com/zsfree/golang-web
 
-#RUN mkdir -p $GOPATH/src/github.com/zsfree/golang-web
-
-#RUN go get -u github.com/gin-gonic/gin
+RUN go get github.com/beego/bee
 
 #RUN go build $GOPATH/src/github.com/zsfree/golang-web
 
-EXPOSE 8080
 
-ENTRYPOINT ["./golang-web"]
+#对外暴露端口
+#EXPOSE 8000
+#CMD ["bash","run-server.sh"]   # 容器执行的命令，起动python程序
+#ENTRYPOINT  ["bash","./start.sh"] 
+#ENTRYPOINT ["./golang-web"]
