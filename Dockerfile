@@ -10,6 +10,7 @@ RUN go get github.com/beego/bee
 RUN go get -u github.com/go-chi/chi
 RUN go get -u github.com/go-chi/docgen
 RUN go get -u github.com/go-chi/render
+RUN go get github.com/bitly/go-simplejson
 
 #RUN go build $GOPATH/src/github.com/zsfree/golang-web
 
